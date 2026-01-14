@@ -4,25 +4,33 @@ import { HeaderLink } from "./constants";
 import { HeaderStyle } from "./Header.styles";
 import Image from "next/image";
 
-import instagramIcon from "../../assets/icons/instagram-icon.svg";
-import facebookIcon from "../../assets/icons/facebook-icon.svg";
-import vkIcon from "../../assets/icons/icons_vk.svg";
+import instagramIcon from "../../assets/icons/instagram-color-dark.svg";
+import logo from "../../assets/icons/logo_aquatica.png";
+import facebookIcon from "../../assets/icons/facebook-color-dark.svg";
+import vkIcon from "../../assets/icons/vk-color-dark.svg";
 
 export default function Header() {
   return (
     <HeaderStyle>
       <header className="header">
+        <Box className="header__bac">
+          <Container maxWidth="xl">
+            <Box className="header__logo-wrapper">
+              <Image src={logo} alt="logo" />
+              <Button variant="contained">Обратный звонок</Button>
+            </Box>
+          </Container>
+        </Box>
         <Container maxWidth="xl">
           <Box className="header__wrapper">
             <Box className="header__link-wrapper">
-              {HeaderLink.map(({ name }, i) => (
-                <Link className="header__links" href="#" key={i}>
+              {HeaderLink.map(({ name, link }, i) => (
+                <Link className="header__links" href={link} key={i}>
                   {name}
                 </Link>
               ))}
             </Box>
             <Box className="header__action-wrapper">
-              <Button variant="outlined">Обратный звонок</Button>
               <Image src={vkIcon} alt="icon" />
               <Image src={instagramIcon} alt="icon" />
               <Image src={facebookIcon} alt="icon" />
