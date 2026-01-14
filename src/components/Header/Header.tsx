@@ -17,7 +17,9 @@ export default function Header() {
           <Container maxWidth="xl">
             <Box className="header__logo-wrapper">
               <Image src={logo} alt="logo" />
-              <Button variant="contained">Обратный звонок</Button>
+              <Button className="header__btn" variant="contained">
+                Обратный звонок
+              </Button>
             </Box>
           </Container>
         </Box>

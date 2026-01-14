@@ -4,6 +4,10 @@ const { CONTACT, PRODUCT } = ROUTES_PATH;
 
 export const HeaderLink = [
   {
+    name: "Главная",
+    link: CONTACT,
+  },
+  {
     name: "О клубе",
     link: CONTACT,
   },

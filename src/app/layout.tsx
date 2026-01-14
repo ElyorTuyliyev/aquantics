@@ -1,7 +1,7 @@
 import React from "react";
 import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
-import theme from "./theme/theme";
+import theme from "../theme/theme";
 import { ThemeProvider } from "@mui/material";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";

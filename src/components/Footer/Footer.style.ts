@@ -1,7 +1,7 @@
 "use client"
 
 
-import theme from "@/src/app/theme/theme";
+import theme from "@/src/theme/theme";
 import styled from "@emotion/styled";
 
 
