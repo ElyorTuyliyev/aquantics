@@ -20,8 +20,8 @@ export default function Footer() {
             <Box className="footer__link-wrapper">
               <Image src={logo} alt="logo" />
               <Box className="footer__link">
-                {HeaderLink.map(({ link, name }) => (
-                  <Link className="footer__link-item" href={link}>
+                {HeaderLink.map(({ link, name }, i) => (
+                  <Link className="footer__link-item" href={link} key={i}>
                     {name}
                   </Link>
                 ))}
