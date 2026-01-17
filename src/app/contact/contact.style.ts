@@ -8,13 +8,11 @@ export const ContactStyle = styled.div`
     margin: 0 40px;
     padding: 25px 46px;
     border-radius: 10px;
-    background-color: ${theme.palette.grey[100]};
+    background-color: ${theme.palette.grey[50]};
 }
 
-.contact__title  {
-    font-size: 24px;
-    color: ${theme.palette.primary.dark};
-    padding: 0 0 20pxs;
+.contact__title,.education__title,.map__title  {
+    padding: 0 0 20px;
 }
 
 .contact {
@@ -39,8 +37,17 @@ export const ContactStyle = styled.div`
     gap: ${theme.spacing(0.8)};
 }
 
-.contact__skype , .contact__gmail {
+.contact__skype , .contact__gmail,.education__location {
     font-size: 14px;
     color: ${theme.palette.grey[500]};
 }
+
+.education,.map {
+    padding:  20px 0 0 0;
+}
+
+.map__images {
+    width: 100%;
+}
+
 `

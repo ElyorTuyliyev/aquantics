@@ -2,7 +2,7 @@ import React from "react";
 import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import theme from "../theme/theme";
-import { ThemeProvider } from "@mui/material";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 
@@ -20,9 +20,11 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <ThemeProvider theme={theme}>
-          <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
-        </ThemeProvider>
+        <AppRouterCacheProvider options={{ key: "mui" }}>
+          <ThemeProvider theme={theme}>
+            <CssBaseline>{children}</CssBaseline>
+          </ThemeProvider>
+        </AppRouterCacheProvider>
         <Footer />
       </body>
     </html>

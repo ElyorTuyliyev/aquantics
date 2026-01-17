@@ -11,6 +11,13 @@ const theme = createTheme({
       contrastText: "#2E79BA",
     },
   },
+  typography: {
+    h1: {
+      color: "#081F37",
+      fontSize: "24px",
+      fontWeight: 600,
+    },
+  },
 });
 
 export default theme;
