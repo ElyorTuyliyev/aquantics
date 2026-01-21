@@ -1,31 +1,31 @@
 import { ROUTES_PATH } from "@/src/config/routes";
 
-const { CONTACT, PRODUCT } = ROUTES_PATH;
+const { CONTACT, PRODUCT, TOURS } = ROUTES_PATH;
 
 export const HeaderLink = [
   {
     name: "Главная",
-    link: CONTACT,
+    link: "/",
   },
   {
     name: "О клубе",
-    link: CONTACT,
+    link: "#",
   },
   {
     name: "Обучение",
-    link: CONTACT,
+    link: "#",
   },
   {
     name: "Снаряжение",
-    link: CONTACT,
+    link: "#",
   },
   {
     name: "Туры",
-    link: CONTACT,
+    link: TOURS,
   },
   {
     name: "Акции",
-    link: CONTACT,
+    link: "#",
   },
   {
     name: "Отзывы",

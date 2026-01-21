@@ -14,8 +14,7 @@ const theme = createTheme({
   typography: {
     h1: {
       color: "#081F37",
-      fontSize: "24px",
-      fontWeight: 600,
+      fontSize: "64px",
     },
   },
   components: {
@@ -59,6 +58,17 @@ const theme = createTheme({
           },
         },
       },
+    },
+    MuiTypography: {
+      variants: [
+        {
+          props: { variant: "highlight" },
+          style: {
+            color: "#5FC9F3",
+            fontWeight: 600,
+          },
+        },
+      ],
     },
   },
 });

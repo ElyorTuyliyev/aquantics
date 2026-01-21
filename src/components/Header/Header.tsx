@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, Button, Container } from "@mui/material";
 import Link from "next/link";
 import { HeaderLink } from "./constants";
@@ -8,8 +10,10 @@ import instagramIcon from "../../assets/icons/instagram-color-dark.svg";
 import logo from "../../assets/icons/logo_aquatica.png";
 import facebookIcon from "../../assets/icons/facebook-color-dark.svg";
 import vkIcon from "../../assets/icons/vk-color-dark.svg";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const path = usePathname();
   return (
     <HeaderStyle>
       <header className="header">
@@ -27,7 +31,11 @@ export default function Header() {
           <Box className="header__wrapper">
             <Box className="header__link-wrapper">
               {HeaderLink.map(({ name, link }, i) => (
-                <Link className="header__links" href={link} key={i}>
+                <Link
+                  className={`header__links ${path === link ? "header__links-active" : ""}`}
+                  href={link}
+                  key={i}
+                >
                   {name}
                 </Link>
               ))}
