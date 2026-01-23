@@ -11,17 +11,19 @@ import {
 import { SocialMediaStyle } from "./SocialMedia.style";
 import cardIcon from "../../assets/icons/card-facebook.png";
 import { usePathname } from "next/navigation";
+import { Highlight } from "../Span/Span";
 
 export function SocialMedia() {
   const path = usePathname();
   return (
     <SocialMediaStyle>
       <Box className="media">
-        <Typography className="media__title">
+        <Typography variant="subtitle1">
           {path === "/contact" ? "ССЫЛКИ НА НАШИ СОЦИАЛЬНЫЕ СЕТИ" : ""}
         </Typography>
-        <Typography className="media__subtitle">
-          Присоединяйся <span className="media__subtitle-color">к нам</span>
+        <Typography className="media__subtitle" variant="h1">
+          Присоединяйся
+          <Highlight> к нам</Highlight>
         </Typography>
       </Box>
       <Box className="card__wrapper">

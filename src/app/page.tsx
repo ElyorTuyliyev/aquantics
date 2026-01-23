@@ -1,17 +1,19 @@
 import { Container, Typography } from "@mui/material";
-import { SocialMedia } from "../components/SocialMedia/SocialMedia";
+
 import { HomeStyle } from "./home.style";
-import Highlight from "../components/Highlight/Highlight";
+import { SocialMedia } from "../components/SocialMedia/SocialMedia";
+import { Highlight } from "../components/Span/Span";
+
 export default function home() {
   return (
     <HomeStyle>
       <main>
         <Container maxWidth="xl">
-          <Typography className="home__title">
+          <Typography variant="subtitle1">
             Обучение дайвингу в Москве
           </Typography>
-          <Typography className="home__subtitle">
-            Дайвинг <span className="home__subtitle-color">в Москве</span>
+          <Typography variant="h1">
+            Дайвинг <Highlight>в Москве</Highlight>
           </Typography>
           <Typography className="home__description">
             Добро пожаловать! На страницах нашего сайта вы найдете качественную,
@@ -28,7 +30,7 @@ export default function home() {
           <SocialMedia />
         </Container>
         <section className="">
-          <Typography variant="h1">Горячие предложения</Typography>
+          <Typography variant="subtitle1">Горячие предложения</Typography>
           <Typography variant="h1">
             Горячие <Highlight>предложения</Highlight>
           </Typography>
